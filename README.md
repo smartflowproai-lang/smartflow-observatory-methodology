@@ -41,7 +41,9 @@ methodology/
 │   ├── 06-spec-validity-sweep.sql         (May 2026 schema re-validation — catalogue quality layer, 88% strict-v2 pass)
 │   ├── 07-volume-backfill.sql             (May 2026 endpoint↔payment-tracker volume join — recipient-set coverage gap)
 │   ├── 08-volume-distribution.sql         (May 2026 cohort segmentation by lifetime USDC volume — buyer-agent filter selectivity support)
-│   └── 09-facilitator-concentration.sql   (May 2026 facilitator landscape: top-N share, HHI, Gini — monopolistic vs competitive structure)
+│   ├── 09-facilitator-concentration.sql   (May 2026 facilitator landscape: top-N share, HHI, Gini — monopolistic vs competitive structure)
+│   ├── 10-wash-drift-wow.sql              (May 2026 week-over-week clean-cohort drift accounting + rolling std-dev anomaly band — companion to Drill-down #6 narrative)
+│   └── 11-cohort-projection.sql           (May 2026 catalogue inflation rate = catalog growth ÷ alive-cohort growth — Bazaar merge skew + heuristic interpretation bands)
 ├── schema/
 │   ├── mapper-db-schema.sql               (mapper.db DDL)
 │   └── payments-db-schema.sql             (payments.db DDL)
