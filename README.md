@@ -39,7 +39,8 @@ methodology/
 │   ├── 04-wellknown-adoption.sql          (Finding 4 — Atlas Part IV / Drill-down #5)
 │   ├── 05-weekly-growth.sql               (Finding 6 — Atlas Part VI / Drill-down #6)
 │   ├── 06-spec-validity-sweep.sql         (May 2026 schema re-validation — catalogue quality layer, 88% strict-v2 pass)
-│   └── 07-volume-backfill.sql             (May 2026 endpoint↔payment-tracker volume join — recipient-set coverage gap)
+│   ├── 07-volume-backfill.sql             (May 2026 endpoint↔payment-tracker volume join — recipient-set coverage gap)
+│   └── 08-volume-distribution.sql         (May 2026 cohort segmentation by lifetime USDC volume — buyer-agent filter selectivity support)
 ├── schema/
 │   ├── mapper-db-schema.sql               (mapper.db DDL)
 │   └── payments-db-schema.sql             (payments.db DDL)
