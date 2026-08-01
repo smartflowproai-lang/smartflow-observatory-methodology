@@ -55,6 +55,36 @@ methodology/
 
 ---
 
+## Weekly series
+
+Beyond the Atlas queries above, this repository also publishes the queries behind the Weekly newsletter.
+
+### Weekly #6 - "How much does the x402 market actually weigh" (2026-08-02)
+
+Eight files under `queries/wi6/`, plus a cross-cutting limits document.
+
+| File | What it produces |
+|---|---|
+| `00-universe-and-filters.sql` | Shared preamble: the ledger universe, the clock, the wash definition, the facilitator marker, the catalogue, the protocol filter. Run first. |
+| `01-amount-filter-baseline.sql` | The amount filtered baseline, i.e. the inflated figure in the piece's lead |
+| `02-protocol-filter-weight.sql` | The protocol filtered weight and the three ratios against file 01 |
+| `03-unmarked-share.sql` | The 94.5 percent unmarked share, plus the autopsy of a number withdrawn from an earlier draft |
+| `04-recipient-bands.sql` | Recipient revenue bands and the concentration line |
+| `05-payment-size-bands.sql` | Payment size distribution, calls versus value |
+| `06-weekly-series.sql` | Eleven consecutive weeks under one filter, and the receiving-address jump |
+| `07-cohort-retention.sql` | Cohort retention for recipients and payers |
+| `docs/wi6-limitations.md` | The eight limits that cut across all of the above |
+
+Two things about this set are worth flagging before you run anything.
+
+**It is filtered on protocol role, not on amount.** Either the money landed on a payTo address published in a service catalogue, or the payment carries a facilitator marker. A bridge contract does not appear in a service catalogue and a liquidity pool does not settle through a facilitator, which is the whole point. The published piece argues that an amount band is a filter on size rather than on purpose, and files 01 and 02 are the same week measured both ways so the difference can be inspected rather than asserted.
+
+**One of these files documents a mistake rather than a finding.** File 03 contains the autopsy of a figure that reached a draft of this piece and was withdrawn before publication: it was arithmetically exact and still wrong, because its population did not match the population it was being compared against. The predicate, the reproduction, and the rule we took from it are all in the file. If the point of publishing methodology is that errors become findable, the errors we found ourselves belong here too.
+
+Expected outputs are documented in each file header, with the date and the exact instant of the ledger they came from. Two of the files report a live re-query rather than the frozen rerun; that split is deliberate and is explained in `docs/wi6-limitations.md`, item L8.
+
+---
+
 ## How to reproduce
 
 1. **Clone**: `git clone https://github.com/smartflowproai-lang/smartflow-observatory-methodology.git`
@@ -109,6 +139,7 @@ Issues, pull requests, and methodology corrections welcome. Disputes over a numb
 | Version | Date | Changes |
 |---|---|---|
 | v1.0.0 | 2026-05-16 | Initial release. 5 queries covering Atlas Findings 1, 3, 4, 5, 6. Schemas for mapper.db + payments.db. |
+| v1.1.0 | 2026-08-02 | Weekly series added. 8 queries + limits doc for Weekly #6 (protocol filter vs amount filter, concentration, size distribution, 11 week series, cohort retention). |
 
 ---
 
