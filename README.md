@@ -134,6 +134,12 @@ Issues, pull requests, and methodology corrections welcome. Disputes over a numb
 
 ---
 
+## Field guide
+
+The failure modes this repository documents from the measurement side are packaged, from the builder side, as a repair guide: [Fix Your 402](https://smartflow6.gumroad.com/l/fix-your-402) (PDF + markdown, USD 39) covers 8 failure chapters built from real scans of live x402 endpoints, each with a symptom, a one-command confirmation, a before/after JSON fix, and a re-scan verification. All 22 JSON examples validate against the open-source x402-endpoint-validator. A [free sample chapter](https://smartflowproai.com/fix-your-402-sample.pdf) is available. It is an implementation guide, not a security audit.
+
+---
+
 ## Versioning
 
 | Version | Date | Changes |
