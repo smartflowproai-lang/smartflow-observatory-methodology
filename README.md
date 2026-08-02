@@ -61,7 +61,7 @@ Beyond the Atlas queries above, this repository also publishes the queries behin
 
 ### Weekly #6 - "How much does the x402 market actually weigh" (2026-08-02)
 
-Eight files under `queries/wi6/`, plus a cross-cutting limits document.
+Nine files under `queries/wi6/`, plus limits and correction documents. **Corrected August 2, 2026:** four facilitator-marker rows were reclassified as ERC-4337 bundlers and dropped; the corrected mature-week headline is 61,221 payments / $7,260.29 and the amount-vs-protocol gap widens from 63x to 240x. Details: `docs/wi6-correction.md`, query `08-corrected-headline.sql`.
 
 | File | What it produces |
 |---|---|
@@ -73,7 +73,9 @@ Eight files under `queries/wi6/`, plus a cross-cutting limits document.
 | `05-payment-size-bands.sql` | Payment size distribution, calls versus value |
 | `06-weekly-series.sql` | Eleven consecutive weeks under one filter, and the receiving-address jump |
 | `07-cohort-retention.sql` | Cohort retention for recipients and payers |
+| `08-corrected-headline.sql` | Corrected headline after dropping four ERC-4337 bundler senders (Aug 2 correction) |
 | `docs/wi6-limitations.md` | The eight limits that cut across all of the above |
+| `docs/wi6-correction.md` | The August 2 correction: evidence, corrected figures, method changes |
 
 Two things about this set are worth flagging before you run anything.
 
@@ -146,6 +148,7 @@ The failure modes this repository documents from the measurement side are packag
 |---|---|---|
 | v1.0.0 | 2026-05-16 | Initial release. 5 queries covering Atlas Findings 1, 3, 4, 5, 6. Schemas for mapper.db + payments.db. |
 | v1.1.0 | 2026-08-02 | Weekly series added. 8 queries + limits doc for Weekly #6 (protocol filter vs amount filter, concentration, size distribution, 11 week series, cohort retention). |
+| v1.1.1 | 2026-08-02 | Weekly #6 correction: four facilitator-marker rows reclassified as ERC-4337 bundlers, corrected headline query + correction document added. |
 
 ---
 
