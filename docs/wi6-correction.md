@@ -37,8 +37,18 @@ The direction of the original finding strengthens: filtering by amount inflates 
 2. The four rows are excluded by a `status` column, not deleted; the exclusion date and reason are recorded. Labelled coverage in the quality canary drops by an expected 1.32 points at the cut date.
 3. The marker remains a label, not a measurement. That line was already in this repository; the correction is what it looks like when it has teeth.
 
+## Three ways this correction could still be wrong
+
+1. **The mechanical test could be the wrong test.** `transferWithAuthorization` is the settlement call for the `exact` scheme, which covers 20,079 of 20,099 catalogued accepts. A facilitator settling a different scheme would fail this gate and be dropped from the marker even though it is doing protocol work. The gate is calibrated to the dominant scheme, not to the protocol.
+2. **The remaining table is not re-gated.** The four rows were removed by the test; the rows already inside were not re-tested against it. Three `pattern_inference` rows from the same April heuristic are still active. Re-running the gate backwards would change the marker again, by under one percent of the mature week as measured on 2026-08-07.
+3. **The denominator moves.** The wash classifier keeps labelling rows after they were first counted, so both the corrected headline and the amount-filtered comparison drift downward between runs. The frozen outputs are a reading at a timestamp, not a constant, and the ratio inherits that drift from both sides.
+
 ## Known limits of the corrected numbers
 
-Carried over from the original run and still true: `tx_hash` is the primary key, so multi-leg settlements count once and bundler dollar totals are underestimated, which makes the contamination estimate conservative. Timestamps are ingest time, not block time. The catalogue grows, so re-runs return slightly more protocol traffic, never less. `tx_sender` is backfilled and mutable, so historical variant splits are not bit-reproducible from earlier seals.
+Carried over from the original run and still true: `tx_hash` is the primary key, so multi-leg settlements count once and bundler dollar totals are underestimated, which makes the contamination estimate conservative. Timestamps are ingest time, not block time. The catalogue grows, which pushes re-runs up, while the wash classifier keeps labelling rows after they were first counted, which pushes them down. In practice a re-run lands within a fraction of a percent of the frozen output, on either side of it. `tx_sender` is backfilled and mutable, so historical variant splits are not bit-reproducible from earlier seals.
 
 Queries: `08-corrected-headline.sql` in `queries/wi6/`. Run order and frozen outputs are in the header of that file.
+
+## Addendum, August 7, 2026
+
+A later audit refined the classification of the four removed rows. Three call `handleOps` on the EntryPoint and are ERC-4337 bundler hot wallets. The fourth (`0xb42f812a...`) routes through a delegation contract and is a relayer, not a bundler; the sentence "56 of 56 sampled transactions" above does not hold for that row. The operative test is unchanged and is what all four fail: none of them calls `transferWithAuthorization`. The exclusion reason recorded against that row in the `facilitators` table was corrected on August 3, 2026.

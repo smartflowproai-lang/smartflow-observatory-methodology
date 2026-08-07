@@ -9,9 +9,11 @@
 --   W3 (corrected, wide cat.) : 64,412 payments | $ 7,626.75 |  7,147 payers |  7,710 recipients
 --   Removed senders combined  : 26,485 payments | $20,479.65 | catalogue legs: 0 (narrow cat)
 --
--- The four excluded senders (facilitators.source='pattern_inference', April entries;
--- classified as ERC-4337 bundlers: they call handleOps on the EntryPoint and never
--- transferWithAuthorization on USDC; see docs/wi6-correction.md):
+-- The four excluded senders (facilitators.source='pattern_inference', April entries).
+-- Three are ERC-4337 bundler hot wallets: they call handleOps on the EntryPoint.
+-- The fourth (0xb42f812a...) routes through a delegation contract and is a relayer.
+-- The test all four fail, and the one that governs the table, is transferWithAuthorization
+-- on USDC; see docs/wi6-correction.md and its addendum of 2026-08-07:
 --   0x1278c1e48e3c9548a5d9f2b16dc27ed311b0697c
 --   0x54e2acab04c89a3fe02852bf8dd69ee8f526bc75
 --   0xb42f812a44c22cc6b861478900401ee759ebead6
