@@ -119,9 +119,11 @@ For numerical claim citation (which uses Atlas content rather than methodology d
 
 ## License
 
-CC-BY-4.0 — attribution required, derivative work permitted. See `LICENSE`.
+Three layers, chosen so each artefact is as easy to reuse as its nature allows:
 
-The queries themselves are licensed under CC-BY-4.0; the schemas (database definitions) are licensed under CC0 (public domain dedication) to encourage interoperability.
+- **SQL queries (`queries/`): MIT** — see `queries/LICENSE`. Run them, embed them, ship them in commercial tooling; attribution appreciated but the MIT notice is the only requirement.
+- **Documentation and analysis (`docs/`, README): CC-BY-4.0** — see `LICENSE` (canonical legal text). Preferred attribution: *"SmartFlow Observatory methodology — github.com/smartflowproai-lang/smartflow-observatory-methodology"*.
+- **Schemas (database DDL in `schema/`): CC0 1.0** (public domain dedication) to encourage interoperability.
 
 ---
 
