@@ -8,11 +8,11 @@
 
 This repository publishes the SQL queries that generate the numerical claims in:
 
-- **[The Agent Economy Atlas — Mid-2026](https://smartflowproai.com/atlas)** (flagship monograph, 22,815 słów)
-- **[The State of x402 — Q1 2026](https://smartflowproai.com/atlas)** (inaugural quarterly)
+- **The Agent Economy Atlas — Mid-2026** (flagship monograph, 22,815 words; unpublished archive)
+- **The State of x402 — Q1 2026** (inaugural quarterly; unpublished archive)
 - **6 standalone drill-down reports** (covering endpoint mortality, mega-bots, CDP facilitator-mediation, wash taxonomy, well-known adoption, weekly tx growth)
 
-Every numerical claim in the published Atlas series is reproducible by running the queries in this repository against any equivalent x402 endpoint catalogue + Base-mainnet USDC payment record. The expected output ranges are documented in each query header.
+Every numerical claim in the Atlas series is reproducible by running the queries in this repository against any equivalent x402 endpoint catalogue + Base-mainnet USDC payment record. The expected output ranges are documented in each query header.
 
 ---
 
@@ -113,8 +113,6 @@ When citing methodology from this repository in your own published research, ple
 
 > *"SmartFlow Observatory methodology, [query name] (May 2026). Available at github.com/smartflowproai-lang/smartflow-observatory-methodology."*
 
-For numerical claim citation (which uses Atlas content rather than methodology directly), please use the citation format documented at [smartflowproai.com/atlas](https://smartflowproai.com/atlas) and consider the 12-month citation license available for institutional citing.
-
 ---
 
 ## License
@@ -132,7 +130,7 @@ Three layers, chosen so each artefact is as easy to reuse as its nature allows:
 **Tom Smart** · SmartFlow Observatory
 - Email: `info@smartflowproai.com`
 - X / Twitter: `@TomSmart_ai`
-- Web: `smartflowproai.com/atlas`
+- Web: `smartflowproai.com`
 
 Issues, pull requests, and methodology corrections welcome. Disputes over a number should be filed as a GitHub issue with the alternative query and the expected output; the project will respond within 5 business days and either correct the methodology, push back with reasoning, or update the public-facing claim.
 
@@ -140,7 +138,7 @@ Issues, pull requests, and methodology corrections welcome. Disputes over a numb
 
 ## Field guide
 
-The failure modes this repository documents from the measurement side are packaged, from the builder side, as a repair guide: [Fix Your 402](https://smartflow6.gumroad.com/l/fix-your-402) (PDF + markdown, USD 39) covers 8 failure chapters built from real scans of live x402 endpoints, each with a symptom, a one-command confirmation, a before/after JSON fix, and a re-scan verification. All 22 JSON examples validate against the open-source x402-endpoint-validator. A [free sample chapter](https://smartflowproai.com/fix-your-402-sample.pdf) is available. It is an implementation guide, not a security audit.
+The failure modes this repository documents from the measurement side are packaged, from the builder side, as a repair guide: [Fix Your 402](https://verify.smartflowproai.com/guide/) (PDF + markdown, USD 29) covers 8 failure chapters built from real scans of live x402 endpoints, each with a symptom, a one-command confirmation, a before/after JSON fix, and a re-scan verification. All 22 JSON examples validate against the open-source x402-endpoint-validator. A [free sample chapter](https://smartflowproai.com/fix-your-402-sample.pdf) is available. It is an implementation guide, not a security audit.
 
 ---
 
