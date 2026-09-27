@@ -85,6 +85,10 @@ Two things about this set are worth flagging before you run anything.
 
 Expected outputs are documented in each file header, with the date and the exact instant of the ledger they came from. Two of the files report a live re-query rather than the frozen rerun; that split is deliberate and is explained in `docs/wi6-limitations.md`, item L8.
 
+### Weekly #14 - "The rules that survived an outside reviewer" (2026-09-27)
+
+No new queries in this issue: it is method, not measurement. Thirty-six rules that came out of a public review thread (round 138 at publication), each with the case behind it. They are the working rules for every query in this repository, including the file above that documents a mistake rather than a finding. https://smartflowproai.substack.com/p/the-rules-that-survived-an-outside
+
 ---
 
 ## How to reproduce
