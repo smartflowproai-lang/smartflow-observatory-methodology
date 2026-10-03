@@ -91,6 +91,15 @@ No new queries in this issue: it is method, not measurement. Thirty-six rules th
 
 ---
 
+## Status note (2026-10-03)
+
+Two files in this repository describe an earlier version of the wash classifier and are out of date for the filter that runs today:
+
+- `queries/03-wash-taxonomy.sql` (May 2026) defines four rules, including a loop rule (R4) with a 60-second window. The current filter has five rules; R3 (dust), R4 (reciprocal pairs) and R5 (channel recycling) have **no time horizon**, so labels on older rows can change at any later pass. Only R1 (self-payment) and R2 (burst, 300-second window) settle within about two days of ingest.
+- `schema/payments-db-schema.sql` (generated 2026-09-11) describes one row per transaction. Since the ledger migration of 2026-09-26 the ledger stores one row per transfer leg, and wash labels are keyed per leg (`tx_hash`, `log_index`). A leg-key bug that spilled labels across legs of the same transaction was corrected on 2026-09-30 for R1–R4; R5 is applied by channel and was not affected by the key change.
+
+The documents referenced by the tree above but not yet present (`docs/wash-flag-definitions.md`, `docs/methodology-bible-excerpt.md`, `docs/data-quality-seal.md`) remain to be published. Until these files are updated, treat query 03 and the schema as historical: they document the May 2026 method, not the current one. The current rules will be published with the Weekly #15 method package.
+
 ## How to reproduce
 
 1. **Clone**: `git clone https://github.com/smartflowproai-lang/smartflow-observatory-methodology.git`
@@ -153,6 +162,7 @@ The failure modes this repository documents from the measurement side are packag
 | v1.0.0 | 2026-05-16 | Initial release. 5 queries covering Atlas Findings 1, 3, 4, 5, 6. Schemas for mapper.db + payments.db. |
 | v1.1.0 | 2026-08-02 | Weekly series added. 8 queries + limits doc for Weekly #6 (protocol filter vs amount filter, concentration, size distribution, 11 week series, cohort retention). |
 | v1.1.1 | 2026-08-02 | Weekly #6 correction: four facilitator-marker rows reclassified as ERC-4337 bundlers, corrected headline query + correction document added. |
+| v1.1.2 | 2026-10-03 | Status note: query 03 and the payments.db schema are marked historical (four-rule classifier, 60-second loop window, one row per transaction); current filter has five rules, three without a time horizon, legs since 2026-09-26. |
 
 ---
 
