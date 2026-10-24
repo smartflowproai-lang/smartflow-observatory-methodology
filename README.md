@@ -89,6 +89,12 @@ Expected outputs are documented in each file header, with the date and the exact
 
 No new queries in this issue: it is method, not measurement. Thirty-six rules that came out of a public review thread (round 138 at publication), each with the case behind it. They are the working rules for every query in this repository, including the file above that documents a mistake rather than a finding. https://smartflowproai.substack.com/p/the-rules-that-survived-an-outside
 
+### Weekly #15 - "The spread by seller stack" (2026-10-04)
+
+The issue reconciles this project's own weekly settlement count for 15–21 September 2026 against a third-party decode published for the same window, and documents the two instruments side by side: where they agree, where they disagree, and why agreement in the headline total is not validation. It also carries the catalogue-stratification addendum (rows C42–C52). https://smartflowproai.substack.com/p/the-spread-by-seller-stack
+
+**Method package: pending (as of 2026-10-24).** The reconciliation method, the stratification addendum, the audit log and the nine scripts exist as internal working files and have not yet been translated and scrubbed for publication. Until they land here, the counts are reproducible from the definitions stated in the issue, and the working files are available to a named reviewer on request. This paragraph will be replaced by the file table when the package is published; no date is promised.
+
 ---
 
 ## Status note (2026-10-03)
@@ -163,6 +169,7 @@ The failure modes this repository documents from the measurement side are packag
 | v1.1.0 | 2026-08-02 | Weekly series added. 8 queries + limits doc for Weekly #6 (protocol filter vs amount filter, concentration, size distribution, 11 week series, cohort retention). |
 | v1.1.1 | 2026-08-02 | Weekly #6 correction: four facilitator-marker rows reclassified as ERC-4337 bundlers, corrected headline query + correction document added. |
 | v1.1.2 | 2026-10-03 | Status note: query 03 and the payments.db schema are marked historical (four-rule classifier, 60-second loop window, one row per transaction); current filter has five rules, three without a time horizon, legs since 2026-09-26. |
+| v1.1.3 | 2026-10-24 | README only: Weekly #15 entry (reconciliation against a third-party decode, stratification addendum C42–C52); method package marked pending, no files added. |
 
 ---
 
