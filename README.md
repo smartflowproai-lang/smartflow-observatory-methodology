@@ -91,9 +91,17 @@ No new queries in this issue: it is method, not measurement. Thirty-six rules th
 
 ### Weekly #15 - "The spread by seller stack" (2026-10-04)
 
-The issue reconciles this project's own weekly settlement count for 15–21 September 2026 against a third-party decode published for the same window, and documents the two instruments side by side: where they agree, where they disagree, and why agreement in the headline total is not validation. It also carries the catalogue-stratification addendum (rows C42–C52). https://smartflowproai.substack.com/p/the-spread-by-seller-stack
+The issue reports the spread across fingerprint groups in the x402 catalogue, what the field classes do and do not show, and an external decode with its reconciliation on hold. It also carries the catalogue-stratification addendum (rows C42–C52). https://smartflowproai.substack.com/p/the-spread-by-seller-stack
 
-**Method package: pending (as of 2026-10-24).** The reconciliation method, the stratification addendum, the audit log and the nine scripts exist as internal working files and have not yet been translated and scrubbed for publication. Until they land here, the counts are reproducible from the definitions stated in the issue, and the working files are available to a named reviewer on request. This paragraph will be replaced by the file table when the package is published; no date is promised.
+**Method package: pending (as of 2026-10-25).** The stratification addendum and the current wash-rule definitions exist as internal working files and have not yet been translated and scrubbed for publication. Until they land here, the counts are reproducible from the definitions stated in the issue, and the working files are available to a named reviewer on request. This paragraph will be replaced by the file table when the package is published; no date is promised.
+
+### Weekly #17 - "Paid for what: a measurement wish list from two correspondents" (2026-10-18)
+
+The issue reconciles this project's own weekly transaction count for 15–21 September 2026 against a third-party decode published for the same window, and documents the two instruments side by side: where they agree, where they disagree, and why agreement in the headline total is not validation. https://smartflowproai.substack.com/p/paid-for-what-a-measurement-wish
+
+**Method package: pending (as of 2026-10-25).** The reconciliation method, the audit log and the scripts exist as internal working files and have not yet been translated and scrubbed for publication. Until they land here, the counts are reproducible from the definitions stated in the issue, and the working files are available to a named reviewer on request. This paragraph will be replaced by the file table when the package is published; no date is promised.
+
+**Correction (2026-10-25):** the entry added on 2026-10-24 under Weekly #15 described this issue's reconciliation. It has been moved here, and the Weekly #15 entry now describes Weekly #15.
 
 ---
 
@@ -170,6 +178,7 @@ The failure modes this repository documents from the measurement side are packag
 | v1.1.1 | 2026-08-02 | Weekly #6 correction: four facilitator-marker rows reclassified as ERC-4337 bundlers, corrected headline query + correction document added. |
 | v1.1.2 | 2026-10-03 | Status note: query 03 and the payments.db schema are marked historical (four-rule classifier, 60-second loop window, one row per transaction); current filter has five rules, three without a time horizon, legs since 2026-09-26. |
 | v1.1.3 | 2026-10-24 | README only: Weekly #15 entry (reconciliation against a third-party decode, stratification addendum C42–C52); method package marked pending, no files added. |
+| v1.1.4 | 2026-10-25 | README only: the v1.1.4 entry mixed two issues. Weekly #15 entry now describes #15 (catalogue stratification, external decode with reconciliation on hold); Weekly #17 entry added (reconciliation against a third-party decode, 15–21 September); both method packages marked pending, no files added. |
 
 ---
 
